@@ -1,0 +1,20 @@
+.primary-nav{
+background-color: #2f476d
+}
+
+.jumbotron-fluid    {
+  position: relative;
+  padding-bottom: 0 !important;
+  padding-top: 0;
+}
+
+.black-bar{
+  background-color: #555a63;
+  height: 50px;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.button-1{
+  padding-left: 75px;
+}

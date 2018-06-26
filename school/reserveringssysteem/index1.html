@@ -1,0 +1,140 @@
+<html>
+
+<title>Verkeersschool Vrijenburg Reserveringsformulier </title>
+
+<head>
+
+
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./css/materialize.min.js"></script>
+    <script src="./css/materialize.js"></script>
+    <script src="/materialize.css"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+
+</head>
+<body bgcolor="#e3eaf4">
+
+
+  <div class="container">
+    <div class="row">
+      <h1 class="center-align">Reserveringssysteem <br>Verkeersschool Vrijenburg </h1>
+      <p class="center-align"> Verplichte velden zijn gemarkeerd met een *</p>
+      <form method="post" action="#" class="col s12">
+
+        <div class="col m6 s12">
+          <label>Geslacht*</label>
+          <p>
+            <input type="radio" name="sex" value="Man" id="sex1" checked="checked" />
+            <label for="sex1">Man</label>
+          </p>
+          <p>
+            <input type="radio" name="sex" value="Vrouw" id="sex2" />
+            <label for="sex2">Vrouw</label>
+          </p>
+        </div>
+
+        <div class="col m6 s12">
+          <label>Soort*</label>
+          <p>
+            <input type="radio" name="kind" value="auto-theorie" id="kind1"  checked="checked"  />
+            <label for="kind1">Auto</label>
+          </p>
+          <p>
+            <input type="radio" name="kind" value="motor-theorie" id="kind2" />
+            <label for="kind2">Motor</label>
+          </p>
+        </div>
+
+        <div class="input-field col m6 s12">
+          <input type="text" name="datepicker" class="datepicker">
+          <label for="datepicker">Gewenste course datum*</label>
+        </div>
+
+        <div class="input-field col m6 s12">
+          <select name="day_time">
+            <option class="validate" value="" disabled selected>Maak een keuze</option>
+            <option value="Ochtend">Ochtend (07:00 - 12:00)</option>
+            <option value="Middag">Middag (12:00 - 17:00)</option>
+            <option value="Avond">Avond (17:00 - 22:00)</option>
+          </select>
+          <label>Dagdeel*</label>
+        </div>
+
+
+        <div class="input-field col m6 s12">
+          <input type="text" name="bsn_number" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+        </input>
+        <label for="bsn_number">BSN Nummer*</label>
+      </div>
+
+      <div class="input-field col m6 s12">
+     <input class="validate" type="text" name="address">
+        <label for="address">Adres*</label>
+      </div>
+
+      <div class="input-field col m6 s12">
+        <input class="validate" type="text" name="residence"><br>
+        <label for="residence">Woonplaats*</label>
+      </div>
+
+      <div class="input-field col m6 s12">
+        <input class="validate" type="text" name="postal_code"><br>
+        <label for="postal-code">Postcode*</label>
+      </div>
+
+      <div class="input-field col m6 s12">
+        <input class="validate" type="date" name="birth-date"><br>
+      </div>
+
+      <div class="input-field col m6 s12">
+        <input class="validate" type="text" name="birthplace"><br>
+        <label for="birthplace">Geboorteplaats*</label>
+      </div>
+
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate">
+        <label for="email" data-error="wrong" data-success="right">E-mail*</label>
+      </div>
+
+      <div class="input-field col m6 s12">
+        <input type="text" name="phone_number" data-length="10" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+      </input>
+      <label for="phone_number  ">Telefoonnummer*</label>
+    </div>
+
+    <div class="input-field col s12">
+      <textarea id="textarea1" name="notes" class="materialize-textarea" data-length="255"></textarea>
+      <label for="textarea1">Notities</label>
+    </div>
+
+    <div class="input-field col s12">
+      <input type="submit" name="submit" class="btn btn-success">
+    </div>
+
+  </form>
+</div>
+</div>
+<script>
+$('.datepicker').pickadate({
+  min: 'Today',
+  selectMonths: true, // Creates a dropdown to control month
+  selectYears: 3, // Creates a dropdown of 15 years to control year,
+  today: 'Today',
+  clear: 'Clear',
+  close: 'Ok',
+  closeOnSelect: false // Close upon selecting a date,
+
+});
+
+</script>
+<script>
+
+$(document).ready(function() {
+  $('select').material_select();
+});</script>
+
+
+</body>
+</html>
