@@ -8,5 +8,6 @@
 </head>
 <body>
   <h1> This is the homepage </h1>
+  <a href="/Reserveringssysteem-BB/school-master/Reserveringssysteem5/reserveren.php">Reserveer een les</a>
 </body>
 </html>
