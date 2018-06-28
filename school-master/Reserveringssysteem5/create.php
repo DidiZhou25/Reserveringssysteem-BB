@@ -1,29 +1,12 @@
 <?php
 
-if(isset(
-  $_POST['sex'],
-  $_POST['kind'],
-  $_POST['datepicker'],
-  $_POST['day_time'],
-  $_POST['bsn_number'],
-  $_POST['address'],
-  $_POST['residence'],
-  $_POST['postal_code'],
-  $_POST['birthplace'],
-  $_POST['phone_number'],
-  $_POST['notes']
+require_once('database.php');
+require_once('userInput.php');
 
-)) {
-    $sex = $_POST['sex'];
-    $kind = $_POST['kind'];
-    $datepicker = $_POST['datepicker'];
-    $day_time = $_POST['day_time'];
-    $bsn_number = $_POST['bsn_number'];
-    $address = $_POST['address'];
-    $residence = $_POST['residence'];
-    $postal_code = $_POST['postal_code'];
-    $birthplace = $_POST['birthplace'];
-    $phone_number = $_POST['phone_number'];
-    $notes = $_POST['notes'];
-}
+$query =  "INSERT INTO booking(`sex`,`kind`,`datepicker`,`day_time`,`bsn_number`,`address`,`residence`,`postal_code`,`birthplace`,`phone_number`,`notes`)
+    VALUES ('".$sex."', '".$kind."', '".$datepicker."', '".$day_time."', '".$bsn_number."', '".$address."' , '".$residence."' , '".$postal_code."', '".$birthplace."', '".$phone_number."', '".$notes."')";
+
+mysqli_query($db, $query) or die('Error: '. $query);
+
+mysqli_close($db);
 ?>
